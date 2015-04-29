@@ -90,6 +90,9 @@
     <Compile Include="CantShowHelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CantShowHelpForm.Designer.cs">
+      <DependentUpon>CantShowHelpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormatDesignerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +103,11 @@
     <EmbeddedResource Include="FormatDesignerForm.resx">
       <DependentUpon>FormatDesignerForm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormatDesignerForm.Designer.cs">
+      <DependentUpon>FormatDesignerForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
