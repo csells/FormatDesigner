@@ -58,33 +58,33 @@ namespace FormatDesigner
             Application.Run(new FormatDesignerForm());
         }
 
-        private void Form1_Load(object sender, System.EventArgs e)
+        void Form1_Load(object sender, EventArgs e)
         {
             // Don't let it resize to be higher or shorter
             // Don't let it resize to be thinner
             // Do let it resize to be fatter
             // NOTE: doing it this way to take font scaling into account
-            this.MinimumSize = this.Size;
-            this.MaximumSize = new Size(int.MaxValue, this.Size.Height);
+            MinimumSize = Size;
+            MaximumSize = new Size(int.MaxValue, Size.Height);
 
             // Select first type
-            this.typeList.SelectedIndex = 0;
+            typeList.SelectedIndex = 0;
 
             // Fill culture list and select current culture entry
             foreach (CultureInfo culture in CultureInfo.GetCultures(CultureTypes.SpecificCultures))
-                this.cultureList.Items.Add(new CultureListItem(culture));
+                cultureList.Items.Add(new CultureListItem(culture));
 
-            this.cultureList.SelectedItem = new CultureListItem(CultureInfo.CurrentCulture);
+            cultureList.SelectedItem = new CultureListItem(CultureInfo.CurrentCulture);
         }
 
         object CreateObjectAndParseString(string typeName, string parseArg)
         {
             // Shortcut string parsing
             Type type = Type.GetType(typeName);
-            if (type == typeof(System.String)) return parseArg;
+            if (type == typeof(String)) return parseArg;
 
             // Ask type to create a new instance using the static Parse method
-            MethodInfo method = type.GetMethod("Parse", new Type[] { typeof(System.String) });
+            MethodInfo method = type.GetMethod("Parse", new Type[] { typeof(String) });
             return method.Invoke(null, new object[] { parseArg });
         }
 
@@ -126,7 +126,7 @@ namespace FormatDesigner
             }
         }
 
-        private void InputChanged(object sender, System.EventArgs e)
+        void InputChanged(object sender, EventArgs e)
         {
             UpdateOutput();
         }
@@ -136,7 +136,7 @@ namespace FormatDesigner
             System.Diagnostics.Process.Start("http://www.oreilly.com/catalog/csharpnut/chapter/appb.pdf");
         }
 
-        private void helpButton_Click(object sender, System.EventArgs e)
+        void helpButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -148,7 +148,7 @@ namespace FormatDesigner
             }
         }
 
-        private void aboutButton_Click(object sender, System.EventArgs e)
+        void aboutButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
               "FormatDesigner is an application to experiment with\r\n" +
@@ -157,19 +157,19 @@ namespace FormatDesigner
               "Copyright (c) 2003, Chris Sells", "FormatDesigner");
         }
 
-        private void exitButton_Click(object sender, System.EventArgs e)
+        void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         [Serializable]
-        private sealed class CultureListItem
+        sealed class CultureListItem
         {
             public readonly CultureInfo Info;
 
             public CultureListItem(CultureInfo info)
             {
-                this.Info = info.IsReadOnly ? info : CultureInfo.ReadOnly(info);
+                Info = info.IsReadOnly ? info : CultureInfo.ReadOnly(info);
             }
 
             public override bool Equals(object obj)
@@ -177,7 +177,7 @@ namespace FormatDesigner
                 CultureListItem item = obj as CultureListItem;
                 if (item == null)
                     return false;
-                return this.Info.Equals(item.Info);
+                return Info.Equals(item.Info);
             }
 
             public override int GetHashCode()
