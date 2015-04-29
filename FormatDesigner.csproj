@@ -109,6 +109,9 @@
       <DependentUpon>FormatDesignerForm.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent />
