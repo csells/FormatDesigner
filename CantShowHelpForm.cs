@@ -24,9 +24,6 @@ namespace FormatDesigner
 {
     using System.Windows.Forms;
 
-    /// <summary>
-	/// Summary description for CantShowHelpForm.
-	/// </summary>
 	partial class CantShowHelpForm : Form
 	{
 		public CantShowHelpForm()
@@ -35,10 +32,6 @@ namespace FormatDesigner
 			// Required for Windows Form Designer support
 			//
 			InitializeComponent();
-
-			//
-			// TODO: Add any constructor code after InitializeComponent call
-			//
 		}
 	}
 }

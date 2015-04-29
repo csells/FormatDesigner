@@ -30,9 +30,6 @@ namespace FormatDesigner
     using System.Security;
     using System.Windows.Forms;
 
-    /// <summary>
-    /// Summary description for Form1.
-    /// </summary>
     partial class FormatDesignerForm : Form
     {
 
@@ -42,15 +39,8 @@ namespace FormatDesigner
             // Required for Windows Form Designer support
             //
             InitializeComponent();
-
-            //
-            // TODO: Add any constructor code after InitializeComponent call
-            //
         }
 
-        /// <summary>
-        /// The main entry point for the application.
-        // </summary>
         [STAThread]
         static void Main()
         {
