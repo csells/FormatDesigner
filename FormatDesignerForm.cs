@@ -1,4 +1,3 @@
-// FormatDesignerForm.cs
 #region Copyright (c) 2003 Chris Sells
 /*
 Permission is hereby granted, free of charge, to any person obtaining a copy
