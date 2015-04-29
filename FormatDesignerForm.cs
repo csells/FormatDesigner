@@ -35,7 +35,6 @@ namespace FormatDesigner
 
     partial class FormatDesignerForm : Form
     {
-
         public FormatDesignerForm()
         {
             //
@@ -50,7 +49,7 @@ namespace FormatDesigner
             Application.Run(new FormatDesignerForm());
         }
 
-        void Form1_Load(object sender, EventArgs e)
+        void Form_Load(object sender, EventArgs e)
         {
             // Don't let it resize to be higher or shorter
             // Don't let it resize to be thinner
