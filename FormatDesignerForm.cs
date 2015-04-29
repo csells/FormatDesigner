@@ -19,13 +19,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 #endregion
-#region History
-// -8/12/03:
-//  -Atif Aziz sent along code to change the culture interactively. Thanks, Atif!
-//  -Sorted Type field
-//  -Made main window a tad wider
-// -8/6/03: initial release
-#endregion
 
 using System;
 using System.Reflection;
