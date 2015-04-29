@@ -68,7 +68,7 @@ namespace FormatDesigner
             cultureList.SelectedItem = new CultureListItem(CultureInfo.CurrentCulture);
         }
 
-        object CreateObjectAndParseString(string typeName, string parseArg)
+        static object CreateObjectAndParseString(string typeName, string parseArg)
         {
             // Shortcut string parsing
             var type = Type.GetType(typeName);
@@ -122,7 +122,7 @@ namespace FormatDesigner
             UpdateOutput();
         }
 
-        void ShowHelp()
+        static void ShowHelp()
         {
             Process.Start("http://www.oreilly.com/catalog/csharpnut/chapter/appb.pdf");
         }
