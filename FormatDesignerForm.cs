@@ -22,12 +22,16 @@ THE SOFTWARE.
 
 namespace FormatDesigner
 {
+    #region Imports
+
     using System;
     using System.Diagnostics;
     using System.Drawing;
     using System.Globalization;
     using System.Security;
     using System.Windows.Forms;
+
+    #endregion
 
     partial class FormatDesignerForm : Form
     {
