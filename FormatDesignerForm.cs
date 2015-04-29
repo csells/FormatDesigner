@@ -33,7 +33,7 @@ namespace FormatDesigner
     /// <summary>
     /// Summary description for Form1.
     /// </summary>
-    public partial class FormatDesignerForm : Form
+    partial class FormatDesignerForm : Form
     {
 
         public FormatDesignerForm()

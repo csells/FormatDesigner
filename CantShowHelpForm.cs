@@ -27,7 +27,7 @@ namespace FormatDesigner
     /// <summary>
 	/// Summary description for CantShowHelpForm.
 	/// </summary>
-	public partial class CantShowHelpForm : Form
+	partial class CantShowHelpForm : Form
 	{
 		public CantShowHelpForm()
 		{
