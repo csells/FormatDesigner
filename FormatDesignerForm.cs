@@ -20,17 +20,16 @@ THE SOFTWARE.
 */
 #endregion
 
-using System;
-using System.Reflection;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using System.Windows.Forms;
-using System.Data;
-using System.Globalization;
-
 namespace FormatDesigner
 {
+    using System;
+    using System.Diagnostics;
+    using System.Drawing;
+    using System.Globalization;
+    using System.Reflection;
+    using System.Security;
+    using System.Windows.Forms;
+
     /// <summary>
     /// Summary description for Form1.
     /// </summary>
@@ -133,7 +132,7 @@ namespace FormatDesigner
 
         void ShowHelp()
         {
-            System.Diagnostics.Process.Start("http://www.oreilly.com/catalog/csharpnut/chapter/appb.pdf");
+            Process.Start("http://www.oreilly.com/catalog/csharpnut/chapter/appb.pdf");
         }
 
         void helpButton_Click(object sender, EventArgs e)
@@ -142,7 +141,7 @@ namespace FormatDesigner
             {
                 ShowHelp();
             }
-            catch (System.Security.SecurityException)
+            catch (SecurityException)
             {
                 (new CantShowHelpForm()).ShowDialog(this);
             }
