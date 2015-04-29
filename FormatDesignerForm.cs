@@ -26,7 +26,6 @@ namespace FormatDesigner
     using System.Diagnostics;
     using System.Drawing;
     using System.Globalization;
-    using System.Reflection;
     using System.Security;
     using System.Windows.Forms;
 
@@ -60,7 +59,7 @@ namespace FormatDesigner
             typeList.SelectedIndex = 0;
 
             // Fill culture list and select current culture entry
-            foreach (CultureInfo culture in CultureInfo.GetCultures(CultureTypes.SpecificCultures))
+            foreach (var culture in CultureInfo.GetCultures(CultureTypes.SpecificCultures))
                 cultureList.Items.Add(new CultureListItem(culture));
 
             cultureList.SelectedItem = new CultureListItem(CultureInfo.CurrentCulture);
@@ -69,27 +68,27 @@ namespace FormatDesigner
         object CreateObjectAndParseString(string typeName, string parseArg)
         {
             // Shortcut string parsing
-            Type type = Type.GetType(typeName);
+            var type = Type.GetType(typeName);
             if (type == typeof(String)) return parseArg;
 
             // Ask type to create a new instance using the static Parse method
-            MethodInfo method = type.GetMethod("Parse", new Type[] { typeof(String) });
+            var method = type.GetMethod("Parse", new Type[] { typeof(String) });
             return method.Invoke(null, new object[] { parseArg });
         }
 
         void UpdateOutput()
         {
             // Create instance of type using input value
-            string typeName = typeList.SelectedItem.ToString();
-            string input = inputText.Text;
-            CultureInfo culture = cultureList.SelectedItem == null ? null : ((CultureListItem)cultureList.SelectedItem).Info;
+            var typeName = typeList.SelectedItem.ToString();
+            var input = inputText.Text;
+            var culture = cultureList.SelectedItem == null ? null : ((CultureListItem)cultureList.SelectedItem).Info;
 
             try
             {
-                object obj = CreateObjectAndParseString(typeName, input);
+                var obj = CreateObjectAndParseString(typeName, input);
 
                 // Format object using format string
-                string format = formatText.Text;
+                var format = formatText.Text;
 
                 outputText.Text = string.Format(culture, "{0:" + format + "}", obj);
                 outputText.ForeColor = SystemColors.WindowText;
@@ -163,7 +162,7 @@ namespace FormatDesigner
 
             public override bool Equals(object obj)
             {
-                CultureListItem item = obj as CultureListItem;
+                var item = obj as CultureListItem;
                 if (item == null)
                     return false;
                 return Info.Equals(item.Info);
