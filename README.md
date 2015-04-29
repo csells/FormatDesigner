@@ -5,7 +5,7 @@ format data in [`String.Format`](https://msdn.microsoft.com/en-us/library/system
 and various type's [`ToString`](https://msdn.microsoft.com/en-us/library/system.iformattable.tostring.aspx)
 functions.
 
-![formatd.JPG](formatd.JPG)
+![formatd.JPG](formatd.png)
 
 Send your comments to [Chris Sells](mailto:csells@sellsbrothers.com).
 

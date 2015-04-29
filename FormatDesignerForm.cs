@@ -237,7 +237,7 @@ namespace FormatDesigner {
       this.formatText.Name = "formatText";
       this.formatText.Size = new System.Drawing.Size(282, 20);
       this.formatText.TabIndex = 5;
-      this.formatText.Text = "mm dddd yy";
+      this.formatText.Text = "MM dddd yy";
       this.formatText.TextChanged += new System.EventHandler(this.InputChanged);
       // 
       // label4
