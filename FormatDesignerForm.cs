@@ -124,7 +124,7 @@ namespace FormatDesigner
 
         static void ShowHelp()
         {
-            Process.Start("http://www.oreilly.com/catalog/csharpnut/chapter/appb.pdf");
+            Process.Start("https://web.archive.org/web/20140210163146/http://oreilly.com/catalog/csharpnut/chapter/appb.pdf");
         }
 
         void helpButton_Click(object sender, EventArgs e)

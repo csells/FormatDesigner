@@ -53,7 +53,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(320, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "http://www.oreilly.com/catalog/csharpnut/chapter/appb.pdf";
+            this.textBox1.Text = "https://web.archive.org/web/20140210163146/http://oreilly.com/catalog/csharpnut/chapter/appb.pdf";
             //
             // okButton
             //
