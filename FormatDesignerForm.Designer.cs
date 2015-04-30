@@ -132,13 +132,15 @@ namespace FormatDesigner
             this.typeList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeList.Items.AddRange(new object[] {
                                                   "System.DateTime",
+                                                  "System.DateTimeOffset",
                                                   "System.Decimal",
                                                   "System.Double",
                                                   "System.Int16",
                                                   "System.Int32",
                                                   "System.Int64",
                                                   "System.Single",
-                                                  "System.String"});
+                                                  "System.String",
+                                                  "System.TimeSpan"});
             this.typeList.Location = new System.Drawing.Point(66, 55);
             this.typeList.Name = "typeList";
             this.typeList.Size = new System.Drawing.Size(284, 21);
