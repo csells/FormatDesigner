@@ -110,7 +110,7 @@ namespace FormatDesigner
             }
             catch (Exception e)
             {
-                outputText.Text = e.Message;
+                outputText.Text = e.GetBaseException().Message;
                 outputText.ForeColor = Color.Red;
                 stringFormatText.Text = "";
                 toStringText.Text = "";
